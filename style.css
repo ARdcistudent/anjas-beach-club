@@ -14,6 +14,9 @@ p{
 }
 h3{
     font-family: var(--serif);
+    text-align: center;
+    text-decoration: underline double;
+    text-transform: uppercase;
 }
 h4{
     padding: 1rem 0;
@@ -99,6 +102,10 @@ iframe{
     border-radius: 20px;
     margin-bottom: 3rem;
 }
+.wrapper{
+    display: flex;
+    justify-content: space-evenly;
+}
 .slide_flex{
     display: flex;
 }
@@ -119,18 +126,30 @@ ol{
 .events_entry,
 .food_n_drink_entry{
     height: 350px;
-    width: 769px;
+    width: 768px;
     border-radius: 20px;
     box-shadow: 5px 5px 5px 6px var(--hover);
     margin: 0 auto;
 }
 .events_entry{
     background: url(./images/event_entry.jpeg) no-repeat center;
-
-
 }
 .food_n_drink_entry{
     background: url(./images/f_n_d_entry.jpeg) no-repeat center;
+}
+.fnd_all div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fnd_all div img{
+    width: 300px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 6px var(--hover);
+}
+.space_right{
+    margin-right: 3rem;
 }
 footer{
     background: linear-gradient(var(--sand), var(--blue));
@@ -167,6 +186,55 @@ tfoot tr td{
     text-align: center;
 }
 
+/* Formularstyle */
+#contact{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+form{
+    text-align: center;
+    font-size: 1.5rem;
+    width: 60vw;
+    padding: 0.4rem 1.5rem;
+    background: var(--blue);
+    color: var(--sand);
+    border-radius: 15px;
+}
+form label{
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+}
+form select,
+form input,
+form textarea{
+    width: 100%;
+}
+form select{
+    text-align: center;
+}
+form textarea{
+    height: 10rem;
+}
+form input[type="button"],
+form input[type="reset"]{
+    padding: 1.5rem;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+form input[type="checkbox"]{
+    transform: scale(2.5);
+    padding: 10px;
+}
+.highlight{
+    font-weight: 900;
+    color: aliceblue;
+    text-shadow: 2px 2px 2px blueviolet;
+}
+
 /* Animationen */
 @keyframes turner{
     0%{
@@ -186,6 +254,22 @@ tfoot tr td{
     }
 }
 
+/* Carousel flickr Workaround */
+.carousel-inner .carousel-item {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    position: absolute;
+  }
+  .carousel-inner .carousel-item:first-of-type {
+    position: relative;
+  }
+  .carousel-inner .active {
+    opacity: 1;
+  }
+
 .test{
     background: linear-gradient(to right, var(--sand), var(--hover), var(--sand));
     padding: 2rem;
@@ -200,5 +284,9 @@ tfoot tr td{
     box-shadow: 5px 5px 5px 6px var(--hover);
     display: block;
     margin: 0 auto;
+    margin-top: 6rem;
     border: 3px solid blueviolet;
+}
+.tested{
+    margin-top: -5rem;
 }
