@@ -4,22 +4,37 @@
 :root{
     --serif: "Crimson Text", serif;
     --sans: "Poppins", sans-serif;
+    --handwriting: "Dancing Script", cursive;
     --blue: rgb(44 57 91);
     --sand: rgb(235 230 219);
     --hover: rgb(100, 113, 147);
 }
+p{
+    font-size: 21px;
+}
+h3{
+    font-family: var(--serif);
+}
+h4{
+    padding: 1rem 0;
+}
 header{
     width: 100vw;
+    height: 15vh;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     background: linear-gradient(var(--blue), var(--sand));
+
+    position: fixed;
+    top: 0;
 }
 header a{
     text-decoration: none;
 }
 .logo{
-    font-family: "Dancing Script", cursive;
+    font-family: var(--handwriting);
     font-size: 50px;
     color: var(--blue);
     position: relative;
@@ -50,6 +65,7 @@ nav ul li a:hover,
 
 .lang_choice{
     position: absolute;
+    top: 13vh;
     right: 0;
 }
 .lang_choice a img{
@@ -64,6 +80,9 @@ nav ul li a:hover,
 main{
     background-color: var(--sand);
     color: var(--blue);
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 10vh;
 }
 section{
     padding-top: 2.5rem;
@@ -71,10 +90,14 @@ section{
 section h1{
     padding: 2rem 0;
 }
+article{
+    margin-bottom: 2rem;
+}
 iframe{
     margin: 1rem;
     box-shadow: 5px 5px 5px 6px var(--hover);
     border-radius: 20px;
+    margin-bottom: 3rem;
 }
 .slide_flex{
     display: flex;
@@ -86,11 +109,63 @@ iframe{
     border-radius: 30px;
     box-shadow: 5px 5px 5px 6px var(--hover);
 }
+.article_top{
+    text-decoration: underline;
+    font-size: 25px;
+}
+ol{
+    font-size: 20px;
+}
+.events_entry,
+.food_n_drink_entry{
+    height: 350px;
+    width: 769px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 6px var(--hover);
+    margin: 0 auto;
+}
+.events_entry{
+    background: url(./images/event_entry.jpeg) no-repeat center;
+
+
+}
+.food_n_drink_entry{
+    background: url(./images/f_n_d_entry.jpeg) no-repeat center;
+}
 footer{
     background: linear-gradient(var(--sand), var(--blue));
 }
 
+/* Tabellenstyle */
+table{
+    font-family: var(--handwriting);
+    font-size: 1.5rem;
+    font-weight: 800;
+    border: 2px solid black;
+    background-color: aliceblue;
+    /* Zum entfernen des Platzes zwischen den Zellen */
+    border-collapse: collapse;
+    /* optional */
+    box-shadow: 5px 5px 5px black;
+}
 
+td, th{
+    border: 2px solid black;
+    padding: 25px 55px;
+    text-align: left;
+}
+th{
+    background-color: var(--blue);
+    color: aliceblue;
+}
+
+tr:nth-child(even){
+    background-color: var(--hover);
+    color: aliceblue;
+}
+tfoot tr td{
+    text-align: center;
+}
 
 /* Animationen */
 @keyframes turner{
@@ -109,4 +184,21 @@ footer{
     100%{
         transform: scaleX(1)
     }
+}
+
+.test{
+    background: linear-gradient(to right, var(--sand), var(--hover), var(--sand));
+    padding: 2rem;
+    text-align: center;
+    color: aliceblue;
+    text-shadow: 3px 3px 3px blueviolet;
+    text-decoration: underline;
+    font-family: var(--handwriting);
+}
+.test div img{
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px 6px var(--hover);
+    display: block;
+    margin: 0 auto;
+    border: 3px solid blueviolet;
 }
