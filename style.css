@@ -65,6 +65,9 @@ main{
     background-color: var(--sand);
     color: var(--blue);
 }
+section{
+    padding-top: 2.5rem;
+}
 section h1{
     padding: 2rem 0;
 }
@@ -72,6 +75,16 @@ iframe{
     margin: 1rem;
     box-shadow: 5px 5px 5px 6px var(--hover);
     border-radius: 20px;
+}
+.slide_flex{
+    display: flex;
+}
+.slider{
+    margin-left: 12%;
+}
+.slider img{
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px 6px var(--hover);
 }
 footer{
     background: linear-gradient(var(--sand), var(--blue));
