@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+:root{
+    --serif: "Crimson Text", serif;
+    --sans: "Poppins", sans-serif;
+    --blue: rgb(44 57 91);
+    --sand: rgb(235 230 219);
+    --hover: rgb(100, 113, 147);
+}
+header{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background: linear-gradient(var(--blue), var(--sand));
+}
+header a{
+    text-decoration: none;
+}
+.logo{
+    font-family: "Dancing Script", cursive;
+    font-size: 50px;
+    color: var(--blue);
+    position: relative;
+    margin-left: 1rem;
+    animation: turner 10s linear infinite alternate-reverse paused ;
+}
+.turn_around{
+    transform: scaleX(-1);
+}
+nav{
+    font-family: var(--sans);
+    margin-right: 1rem;
+}
+nav ul li{
+    font-size: 2rem;
+    display: inline-block;
+    padding: 1.5rem;
+}
+nav ul li a{
+    color: var(--blue);
+    transition: 0.8s;
+}
+nav ul li a:hover,
+.logo:hover{
+    color: var(--hover);
+    animation-play-state: running;
+}
+
+.lang_choice{
+    position: absolute;
+    right: 0;
+}
+.lang_choice a img{
+    width: 200px;
+    margin: 2rem;
+    transition: 0.5s;
+}
+.lang_choice a img:hover{
+    border-radius: 30%;
+}
+
+main{
+    background-color: var(--sand);
+    color: var(--blue);
+}
+section h1{
+    padding: 2rem 0;
+}
+iframe{
+    margin: 1rem;
+    box-shadow: 5px 5px 5px 6px var(--hover);
+    border-radius: 20px;
+}
+footer{
+    background: linear-gradient(var(--sand), var(--blue));
+}
+
+
+
+/* Animationen */
+@keyframes turner{
+    0%{
+        transform: scaleX(0)
+    }
+    25%{
+        transform: scaleX(-0.5)
+    }
+    50%{
+        transform: scaleX(-1)
+    }
+    75%{
+        transform: scaleX(0.5)
+    }
+    100%{
+        transform: scaleX(1)
+    }
+}
