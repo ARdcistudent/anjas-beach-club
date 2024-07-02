@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projektwebsite zur Erläuterung der UI/UX-Grundlagen, die eine Onepager-Ansicht einer Strandbar zeigt">
+    <meta name="keywords" content="Strand, Bar, Club, Lounge, Disco, Party, Drinks, Cocktails, Livemusik, Chillout, gemütlich, VIP, die ganze Nacht geöffnet, Bereich, Mieten, Events, freundlich, neue Leute kennenlernen, Themenpartys">
+    <meta name="author" content="André Rühmling @ DCI">
+    <script src="https://kit.fontawesome.com/7157641a3d.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./images/palm.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script>
+        // Funktion zur Weiterleitung und Anzeige des Countdowns
+        function redirectAfterDelay() {
+            let secondsRemaining = 30;
+            const countdownElement = document.getElementById("countdown");
+
+            const countdownInterval = setInterval(function() {
+                secondsRemaining--;
+                countdownElement.textContent = secondsRemaining;
+
+                if (secondsRemaining <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = "./index_de.html";
+                }
+            }, 1000);
+        }
+    </script>
+    <title>ABC | AnJa's Beach Club</title>
+</head>
+<body onload="redirectAfterDelay()">
+    <header>
+        <a class="logo-txt" href="#up">
+          <div class="logo">
+          <img src="./images/palm.png" width="150px" alt="blue palm drawn in front of a rising sun transparent background" class="turn_around">
+              <span class="small_logo">ABC</span>
+              <span class="big_logo">AnJa's Beach Club</span>
+          <img src="./images/palm.png" width="150px" alt="blue palm drawn in front of a rising sun transparent background">    
+          </div>
+        </a>
+        <div class="phone_menu">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-bars"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#location">Location</a></li>
+              <li><a class="dropdown-item" href="#events">Veranstalltungen</a></li>
+              <li><a class="dropdown-item" href="#prices">Preise</a></li>
+              <li><a class="dropdown-item" href="#contact">Kontakt</a></li>
+              <li><a class="dropdown-item" href="./index_de.html">Zur englischen Version</a></li>
+            </ul>
+        </div>
+          <nav>
+              <ul>
+                  <li><a href="#location">Location</a></li>
+                  <li><a href="#events">Veranstalltungen</a></li>
+                  <li><a href="#prices">Preise</a></li>
+                  <li><a href="#contact">Kontakt</a></li>
+              </ul>
+          </nav>
+    </header>
+
+    <main class="full">
+        <section>
+        <h1>Vielen Dank für deine Nachricht!</h1>
+        <p>Du wirst in <span id="countdown">30</span> Sekunden zur Hauptseite zurückgeleitet...</p>
+        </section>
+        <article class="thx">
+            <p>Wenn du dich für die Anmeldung zu unserem Newsletter entschieden hast, erhälst du innerhalb der nächsten 10 Minuten eine E-Mail mit einem QR-Code.</p>
+            <p>Diesen kannst du bei deinem nächsten Besuch nutzen um 20% deiner Rechnung zu reduzieren!</p>
+        </article>
+    </main>
+    
+    <footer>
+        <div class="left_footer">
+            <p class="logo">AnJa's Beach Club</p>
+            <div class="socialmediaicons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+        
+        <div class="footer_info">
+            <h5>Rechtlicher Hinweis</h5>
+            <p>Bilder auf dieser Seite wurden von André Rühmling erstellt, über KI von Perchance AI Picturecreator, von den jeweiligen Firmen und/oder von pixabay.com kopiert</p>
+            <p>&copy; <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script> ALLE RECHTE VORBEHALTEN</p>
+            </div>
+            <div class="footer_info">
+            <h5>Impressum</h5>
+            <p>André Rühmling</p>
+            <p>DCI Student</p>
+            <p>WD-TZ-D01</p>
+            <p><a href="mailto:andre.ruehmling@dci-student.org">Mail Me!</a></p>
+            </div>
+            <div class="footer_info">
+            <h5>Jobs & Co.</h5>
+            <p>Da es sich hier um eine Projektwebsite handelt, sind leider keine Jobs verfügbar!</p>
+            <p>(Sofern du dich gerne als Sponsor bewerben und mir Millionen von Euro's überweisen möchtest, dann kannst du mich gerne per Mail kontaktieren) 😜</p>
+            </div>
+       
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+            // Handle Bootstrap carousel slide event
+            $('.carousel').carousel({
+          interval: 100
+      });
+    </script>
+</body>
+</html>
