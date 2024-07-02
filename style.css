@@ -9,6 +9,14 @@
     --sand: rgb(235 230 219);
     --hover: rgb(100, 113, 147);
 }
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 .highlight{
     font-weight: 900;
     color: aliceblue;
@@ -28,7 +36,7 @@ h4{
 }
 header{
     width: 100vw;
-    height: 15vh;
+    /* height: 15vh; */
     z-index: 999;
     display: flex;
     justify-content: space-between;
@@ -75,9 +83,10 @@ nav ul li a:hover,
     position: absolute;
     top: 13vh;
     right: 0;
+    z-index: 999;
 }
 .lang_choice a img{
-    width: 200px;
+    width: 100px;
     margin: 2rem;
     transition: 0.5s;
 }
@@ -90,7 +99,7 @@ main{
     color: var(--blue);
     padding-left: 6rem;
     padding-right: 6rem;
-    padding-top: 10vh;
+    padding-top: 12vh;
 }
 section{
     padding-top: 2.5rem;
@@ -128,6 +137,26 @@ iframe{
 ol{
     font-size: 20px;
 }
+.test{
+    background: linear-gradient(to right, var(--sand), var(--hover), var(--sand));
+    padding: 2rem;
+    text-align: center;
+    color: aliceblue;
+    text-shadow: 3px 3px 3px blueviolet;
+    text-decoration: underline;
+    font-family: var(--handwriting);
+}
+.test div img{
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px 6px var(--hover);
+    display: block;
+    margin: 0 auto;
+    margin-top: 6rem;
+    border: 3px solid blueviolet;
+}
+.tested{
+    margin-top: -5rem;
+}
 .events_entry,
 .food_n_drink_entry{
     height: 350px;
@@ -149,7 +178,7 @@ ol{
 }
 .fnd_all div img{
     width: 300px;
-    margin: 10px;
+    margin: 1rem;
     border-radius: 20px;
     box-shadow: 5px 5px 5px 6px var(--hover);
 }
@@ -185,8 +214,32 @@ ol{
 .card a{
     font-size: 1.5rem;
 }
+
 footer{
     background: linear-gradient(var(--sand), var(--blue));
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    font-size: 1.3rem;
+}
+footer i{
+    font-size: 2rem;
+    padding-right: 0.5rem;
+}
+footer p{
+    font-family: var(--handwriting);
+}
+.footer_info,
+.left_footer{
+    width: calc(100%/5);
+    padding-top: 1rem;
+}
+footer div:first-of-type{
+    margin-left: 1rem;
+    text-align: center;
+}
+footer div:last-of-type{
+    margin-right: 1rem;
 }
 
 /* Tabellenstyle */
@@ -230,7 +283,6 @@ tfoot tr td{
 form{
     text-align: center;
     font-size: 1.5rem;
-    width: 60vw;
     padding: 0.4rem 1.5rem;
     background: var(--blue);
     color: var(--sand);
@@ -260,7 +312,7 @@ form input[type="reset"]{
     font-size: 1.5rem;
 }
 form input[type="checkbox"]{
-    transform: scale(2.5);
+    transform: scale(2);
     padding: 10px;
 }
 
@@ -299,23 +351,64 @@ form input[type="checkbox"]{
     opacity: 1;
   }
 
-.test{
-    background: linear-gradient(to right, var(--sand), var(--hover), var(--sand));
-    padding: 2rem;
-    text-align: center;
-    color: aliceblue;
-    text-shadow: 3px 3px 3px blueviolet;
-    text-decoration: underline;
-    font-family: var(--handwriting);
+/* Mediaevents */
+
+@media (min-width: 1385px) {
+    .small_logo{
+        display: none;
+    }
+    .phone_menu{
+        display: none;
+    }
 }
-.test div img{
-    border-radius: 30px;
-    box-shadow: 5px 5px 5px 6px var(--hover);
-    display: block;
-    margin: 0 auto;
-    margin-top: 6rem;
-    border: 3px solid blueviolet;
+@media (max-width: 1384px) {
+    .big_logo{
+        display: none;
+    }
+    nav{
+        display: none;
+    }
+    header{
+        display: block;
+        text-align: center;
+    }
+    header i{
+        font-size: 50px;
+        color: var(--blue);
+    }
+    .lang_choice{
+       display: none;
+    }
+    main{
+        padding-top: 150px;
+    }
+    .events_entry,
+    .food_n_drink_entry{
+    min-height: 60%;
+    width: 64%;
 }
-.tested{
-    margin-top: -5rem;
+
+}
+@media (max-width: 428px){
+    .logo img,
+    .photos_last_event,
+    .events_entry,
+    .food_n_drink_entry,
+    .three1 img:nth-of-type(2),
+    .three1 img:nth-of-type(3),
+    .three1 img:nth-of-type(4),
+    .three2 img:nth-of-type(2),
+    .three2 img:nth-of-type(3),
+    .three2 img:nth-of-type(4){
+        display: none;
+    }
+    main{
+        padding: 0;
+    }
+    #contact{
+        width: 100vw;
+    }
+    footer .logo{
+        display: none;
+    }
 }
