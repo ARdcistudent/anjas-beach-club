@@ -9,6 +9,11 @@
     --sand: rgb(235 230 219);
     --hover: rgb(100, 113, 147);
 }
+.highlight{
+    font-weight: 900;
+    color: aliceblue;
+    text-shadow: 2px 2px 2px blueviolet;
+}
 p{
     font-size: 21px;
 }
@@ -151,6 +156,35 @@ ol{
 .space_right{
     margin-right: 3rem;
 }
+.three_cards{
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem 0;
+    border-radius: 50%;
+    background: linear-gradient(var(--blue), var(--sand, var(--blue)));
+}
+.card{
+    font-family: var(--serif);
+    width: 30rem;
+    height: 20rem;
+    text-align: center;
+}
+.card img{
+    width: 90%;
+    height: 50%;
+    margin: 1.5rem auto;
+}
+.card h5{
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: underline double;
+}
+.card p{
+    padding: 1rem;
+}
+.card a{
+    font-size: 1.5rem;
+}
 footer{
     background: linear-gradient(var(--sand), var(--blue));
 }
@@ -228,11 +262,6 @@ form input[type="reset"]{
 form input[type="checkbox"]{
     transform: scale(2.5);
     padding: 10px;
-}
-.highlight{
-    font-weight: 900;
-    color: aliceblue;
-    text-shadow: 2px 2px 2px blueviolet;
 }
 
 /* Animationen */
